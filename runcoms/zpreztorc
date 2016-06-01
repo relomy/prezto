@@ -41,7 +41,7 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'prompt'
 
-zstyle ':prezto:module:prompt' theme 'minimal'
+zstyle ':prezto:module:prompt' theme 'alewando'
 
 #
 # Autosuggestions
