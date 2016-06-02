@@ -43,27 +43,28 @@ function prompt_steeef_setup {
 
   # Use extended color pallete if available.
   if [[ $TERM = *256color* || $TERM = *rxvt* ]]; then
-    _prompt_steeef_colors=(
-      "%F{cyan}"
-      "%F{yellow}"
-      "%F{magenta}"
-      "%F{red}"
-      "%F{green}"
-#    _prompt_steeef_colors=(
-#      "%F{81}"  # Turquoise
-#      "%F{166}" # Orange
-#      "%F{135}" # Purple
-#      "%F{161}" # Hotpink
-#      "%F{118}" # Limegreen
+   _prompt_steeef_colors=(
+     "%F{81}"  # Turquoise
+     "%F{166}" # Orange
+     "%F{135}" # Purple
+     "%F{161}" # Hotpink
+     "%F{118}" # Limegreen
     )
   else
     _prompt_steeef_colors=(
-      "%F{cyan}"
-      "%F{yellow}"
-      "%F{magenta}"
-      "%F{red}"
-      "%F{green}"
+     "%F{81}"  # Turquoise
+     "%F{166}" # Orange
+     "%F{135}" # Purple
+     "%F{161}" # Hotpink
+     "%F{118}" # Limegreen
     )
+    # _prompt_steeef_colors=(
+    #   "%F{cyan}"
+    #   "%F{yellow}"
+    #   "%F{magenta}"
+    #   "%F{red}"
+    #   "%F{green}"
+    # )
   fi
 
   # Formats:
@@ -91,10 +92,14 @@ function prompt_steeef_setup {
   zstyle ':prezto:module:python:info:virtualenv' format '(%v)'
 
   # Define prompts.
+#   PROMPT="
+# ${_prompt_steeef_colors[3]}%n%f at ${_prompt_steeef_colors[2]}%m%f in ${_prompt_steeef_colors[5]}%~%f "'${vcs_info_msg_0_}'" "'$python_info[virtualenv]'"
+# $ "
   PROMPT="
-${_prompt_steeef_colors[3]}%n%f at ${_prompt_steeef_colors[2]}%m%f in ${_prompt_steeef_colors[5]}%~%f "'${vcs_info_msg_0_}'" "'$python_info[virtualenv]'"
+${_prompt_steeef_colors[3]}%n%f@${_prompt_steeef_colors[2]}%m%f|${_prompt_steeef_colors[5]}%~%f "'${vcs_info_msg_0_}'" "'$python_info[virtualenv]'"
 $ "
 #  RPROMPT=''
+  SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 }
 
 prompt_steeef_setup "$@"
