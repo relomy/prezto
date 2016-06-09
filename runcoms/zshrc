@@ -11,3 +11,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# iterm title
+# case $TERM in
+  # *term*)
+  # precmd () {print -Pn "\e]0;%~\s"}
+  # precmd () {echo -ne "\e]1;$PWD\a"}
+  # precmd () {print -Pn "\e]0;%n@%m: %~\a"}
+#esac
+
+# aliases
+alias pcat='pygmentize -O style=native -g'
+alias NOW='date +%Y%m%d%H%M%S'
