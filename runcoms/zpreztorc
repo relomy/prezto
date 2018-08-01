@@ -130,8 +130,6 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 # Set the prompt to display the return code along with an indicator for non-zero
 # return codes. This is not supported by all prompts.
 # zstyle ':prezto:module:prompt' show-return-val 'yes'
-=======
->>>>>>> e092576e9c64c6a7434c2f0e25788423d7fd3ded
 
 #
 # Ruby
