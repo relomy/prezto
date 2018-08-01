@@ -26,7 +26,6 @@ zstyle -s ':prezto:module:git:status:ignore' submodules '_git_status_ignore_subm
 # Aliases
 #
 
-<<<<<<< HEAD
 if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   # Git
   alias g='git'
@@ -269,7 +268,7 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gwx='git rm -r'
   alias gwX='git rm -rf'
 fi
-=======
+
 # Git
 alias g='git'
 
@@ -423,4 +422,3 @@ alias gwc='git clean -n'
 alias gwC='git clean -f'
 alias gwx='git rm -r'
 alias gwX='git rm -rf'
->>>>>>> more commit edits?
