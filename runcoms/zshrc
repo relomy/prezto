@@ -26,4 +26,9 @@ alias NOW='date +%Y%m%d%H%M%S'
 
 # create a global per-pane variable that holds the pane's PWD
 export PS1=$PS1'$( [ -n $TMUX ] && tmux setenv -g TMUX_PWD_$(tmux display -p "#D" | tr -d %) $PWD)'
+
+# always use color
+alias ls='ls --group-directories-first --color=always'
+
+# if grc installed, set colors
 [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
