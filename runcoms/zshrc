@@ -25,7 +25,7 @@ alias pcat='pygmentize -O style=native -g'
 alias NOW='date +%Y%m%d%H%M%S'
 
 # create a global per-pane variable that holds the pane's PWD
-if [ -n ${TMUX+x} ]; then
+if [[ $TERM =~ /screen/ && -n ${TMUX+x} ]]; then
     export PS1=$PS1'$( tmux setenv -g TMUX_PWD_$(tmux display -p "#D" | tr -d %) $PWD )'
 fi
 
